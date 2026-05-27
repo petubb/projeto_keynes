@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lista de Alunos</title>
+    <title>Menu</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="container mt-5">
@@ -21,18 +21,7 @@
             </tr>
         </thead>
         <tbody>
-            <c:forEach var="aluno" items="${lista}">
-                <tr>
-                    <td>${aluno.id}</td>
-                    <td>${aluno.matricula}</td>
-                    <td>${aluno.nome}</td>
-                    <td>${aluno.ativo ? 'Sim' : 'Não'}</td>
-                    <td class="text-center">
-                        <a href="editarAluno?id=${aluno.id}" class="btn btn-sm btn-warning">Editar</a>
-                        <a href="excluirAluno?id=${aluno.id}" class="btn btn-sm btn-danger" onclick="return confirm('Tem certeza que deseja apagar este aluno e todo seu histórico de presenças?');">Excluir</a>
-                    </td>
-                </tr>
-            </c:forEach>
+
         </tbody>
     </table>
 </body>
